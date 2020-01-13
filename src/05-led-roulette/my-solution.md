@@ -44,6 +44,8 @@ $ arm-none-eabi-gdb target/thumbv7em-none-eabihf/release/led-roulette
 $ #                                              ~~~~~~~
 ```
 
+**Note:** Some users found 
+
 Binary size is something we should always keep an eye on! How big is your solution? You can check
 that using the `size` command on the release binary:
 

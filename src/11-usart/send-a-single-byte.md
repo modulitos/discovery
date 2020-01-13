@@ -16,5 +16,5 @@ minicom/PuTTY open.
 This program writes to the `TDR` register. This causes the `USART` peripheral to send one byte of
 information through the serial interface.
 
-On the receiving end, your laptop, you should see show the character `X` appear on minicom/PuTTY's
+On the receiving end, your laptop, you should see the character `X` appear on minicom/PuTTY's
 terminal.

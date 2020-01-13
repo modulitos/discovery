@@ -47,17 +47,27 @@ use heapless::{consts, Vec};
 #[entry]
 fn main() -> ! {
     // let (usart1, mono_timer, itm) = aux11::init();
+
     let (usart1, mono_timer, mut itm) = aux11::init();
+
+    // let brr_div = usart1.brr.read().bits();
 
     // A buffer with 32 bytes of capacity
     let mut buffer: Vec<u8, consts::U32> = Vec::new();
 
     iprintln!(&mut itm.stim[0], "starting!!!");
     loop {
+        let over8_is_set = usart1.cr1.read().over8().bit_is_set();
+        iprintln!(&mut itm.stim[0], "over8: {}", over8_is_set);
+        let brr_div = usart1.brr.read().bits();
+        iprintln!(&mut itm.stim[0], "brr_div: {:0x}", brr_div + 10);
+
         iprintln!(&mut itm.stim[0], "outer loop - clearing buffer");
         buffer.clear();
         loop {
             iprintln!(&mut itm.stim[0], "inside inner loop");
+            // let over8 = usart1.cr1.read().over8().bit();
+
             while usart1.isr.read().rxne().bit_is_clear() {}
             iprintln!(
                 &mut itm.stim[0],

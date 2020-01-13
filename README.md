@@ -1,3 +1,8 @@
+# microcontroller reference manual:
+https://www.st.com/content/ccc/resource/technical/document/reference_manual/4a/19/6e/18/9d/92/43/32/DM00043574.pdf/files/DM00043574.pdf/jcr:content/translations/en.DM00043574.pdf
+# Discovery kit reference manual:
+https://www.st.com/content/ccc/resource/technical/document/user_manual/8a/56/97/63/8d/56/41/73/DM00063382.pdf/files/DM00063382.pdf/jcr:content/translations/en.DM00063382.pdf
+
 # `Discovery`
 
 > Discover the world of microcontrollers through Rust
